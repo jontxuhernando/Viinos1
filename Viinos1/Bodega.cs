@@ -21,7 +21,7 @@ namespace Vinos1
 
         
 
-        VinosDB wine=new VinosDB(); 
+       
 
         //Leer base de datos de clientes
 
@@ -280,7 +280,7 @@ namespace Vinos1
             }
 
 
-        }*/
+        }
                         
 
 
@@ -300,7 +300,7 @@ namespace Vinos1
 
 
 
-
+        */
 
 
         string direccion;
@@ -311,87 +311,87 @@ namespace Vinos1
         public string Climatologia { get => climatologia; set => climatologia = value; }
         public string Calidad { get => calidad; set => calidad = value; }
 
-         static void Main(string[] args)
+       static void Main(string[] args)
         {
-            /*    VinosDB wine=new VinosDB();
-                int op;
-                Console.WriteLine("Bienvenido a la Bodega");
-                Console.WriteLine("Seleccione que desea hacer \n 1) Ver nuestros vinos \n 2) Visitar nuestra Bodega \n 3) Saber mas de nosotros \n 4) Area privada \n 0) Salir" );
-                op=int.Parse(Console.ReadLine());
 
+            int op;
+            Console.WriteLine("Bienvenido a la Bodega");
+            Console.WriteLine("Seleccione que desea hacer \n 1) Ver nuestros vinos \n 2) Visitar nuestra Bodega \n 3) Saber mas de nosotros \n 4) Area privada \n 0) Salir");
+            op = int.Parse(Console.ReadLine());
+            VinosDB wine = new VinosDB();
 
-                //Menu Principal
+            //Menu Principal
 
-                do
-                {
-                    switch (op)
-                    {
-                        case 1:
-                            wine.LeerVinos();
-                            break;
-
-                        case 2:
-                         wine.insertarVino();
-                            break;
-
-                        case 3:
-                           acercaDe();
-                            break;
-
-                        case 4:
-                      //   wine.areaprivada();  //esta opcion abrira el area privada si el usuario y la contraseña son correctos
-                            break;
-
-                    }
-                    Console.WriteLine("Seleccione que desea hacer \n 1) Ver nuestros vinos \n 2) Visitar nuestra Bodega \n 3) Saber mas de nosotros \n 4) Area privada \n 0) Salir");
-                    op = int.Parse(Console.ReadLine());
-                } while (op != 0);
-
-                */
-
-
-            List<Ardoa> listaVinos = new List<Ardoa>()  // crea lista de vinos de la List de la clase Ardoa
+            do
             {
-                new Ardoa()
+                switch (op)
                 {
-                    Nombre="Aromas de Laguardia",   // hace el nuevo ardoa con los atributos de la clase Ardoa
-                    Anio=2015,
-                    Tipo="Tinto"
-                    
-                },
+                    case 1:
+                        wine.LeerVinos();
+                        break;
 
-                new Ardoa()
-                {
-                    Nombre="Esencias",
-                    Anio=2020,
-                    Tipo="Blanco"
+                    case 2:
+                        wine.insertarVino();
+                        break;
 
-                },
-                
-        };
+                    case 3:
+                        acercaDe();
+                        break;
 
-            //listaVinos.Remove("Esencias");
+                    case 4:
+                        //   wine.areaprivada();  //esta opcion abrira el area privada si el usuario y la contraseña son correctos
+                        break;
 
-            //recorre la lista con un array para mostrar los elementos 
-            Console.WriteLine("------------------Lista de vinos----------------");
+                }
+                Console.WriteLine("Seleccione que desea hacer \n 1) Ver nuestros vinos \n 2) Visitar nuestra Bodega \n 3) Saber mas de nosotros \n 4) Area privada \n 0) Salir");
+                op = int.Parse(Console.ReadLine());
+            } while (op != 0);
 
-            for (int i = 0; i < listaVinos.Count; i++)
-            {
-                Console.WriteLine(listaVinos[i].Nombre + " es del año " + listaVinos[i].Anio);
-            }
-            Console.ReadKey();
+
+
+
+            /*   List<Ardoa> listaVinos = new List<Ardoa>()  // crea lista de vinos de la List de la clase Ardoa
+               {
+                   new Ardoa()
+                   {
+                       Nombre="Aromas de Laguardia",   // hace el nuevo ardoa con los atributos de la clase Ardoa
+                       Anio=2015,
+                       Tipo="Tinto"
+
+                   },
+
+                   new Ardoa()
+                   {
+                       Nombre="Esencias",
+                       Anio=2020,
+                       Tipo="Blanco"
+
+                   },
+
+           };
+
+               //listaVinos.Remove("Esencias");
+
+               //recorre la lista con un array para mostrar los elementos 
+               Console.WriteLine("------------------Lista de vinos----------------");
+
+               for (int i = 0; i < listaVinos.Count; i++)
+               {
+                   Console.WriteLine(listaVinos[i].Nombre + " es del año " + listaVinos[i].Anio);
+               }
+               Console.ReadKey();
+
+           }
+            */
+
+
+
+
+
+
+
 
         }
-
-
-                
-          
-
-            
-
-
-
-         
 
 
         
