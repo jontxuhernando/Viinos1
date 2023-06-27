@@ -47,6 +47,7 @@
     <Compile Include="Bodega.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Clientes.cs" />
+    <Compile Include="ClientesDB.cs" />
     <Compile Include="Departamentos.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="intAcercade.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Visitante.cs" />
     <Compile Include="Visitantes.cs" />
     <Compile Include="Visitas.cs" />
+    <Compile Include="VisitasDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
