@@ -51,6 +51,8 @@
     <Compile Include="ClientesDB.cs" />
     <Compile Include="Departamentos.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="Empleados.cs" />
+    <Compile Include="EmpleadosDB.cs" />
     <Compile Include="intAcercade.cs" />
     <Compile Include="intLogin.cs" />
     <Compile Include="intPrincipal.cs" />

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Viinos1;
 
 namespace Vinos1
 
@@ -15,6 +16,8 @@ namespace Vinos1
 
 
         VisitasDB visi = new VisitasDB();
+        VisitantesDB visitor = new VisitantesDB();
+        EmpleadosDB emp =new EmpleadosDB();
 
         //Muestra los datos e información de la bodega 
 
@@ -44,12 +47,19 @@ namespace Vinos1
                 int gestion;
                 do
                 {
-                    Console.WriteLine("Bienvenido "+usuario+" , que quieres hacer hoy? \n 1) Mostrar Empleados \n 2) Mostrar Cliente \n 3) Añadir Empleado \n 4) Añadir Cliente \n 5) Borrar Empleado \n 6) Borrar Cliente \n 7) Insertar Vino \n 8) Mostrar Vinos \n 9) Borrar Vino \n 0) Salir");
+                    Console.WriteLine("Bienvenido "+usuario+" , que quieres hacer hoy? \n 1) Mostrar Empleados \n 2) Mostrar Cliente \n 3) Añadir Empleado \n 4) Añadir Cliente \n 5) Borrar Empleado \n 6) Borrar Cliente \n 7) Insertar Vino \n 8) Mostrar Vinos \n 9) Borrar Vino \n 10) Registrar Visitante \n 0) Salir");
                     gestion = int.Parse(Console.ReadLine());
                     switch (gestion) {
 
+                            case 1:
+                                EmpleadosDB.LeerEmpleados();
+                            break;
                             case 2:
-                              //  LeerClientes();
+                            
+                            break;
+
+                            case 3:
+                                EmpleadosDB.insertarEmpleado();
                             break;
 
                             case 4:
@@ -64,11 +74,17 @@ namespace Vinos1
                               //  LeerVinos();
                             break;
 
+                            case 10:
+                                VisitantesDB.insertarVisitante();
+                            break;
+
            }
 
 
 
                 }while (gestion!=0);
+                Console.WriteLine("Bienvenido " + usuario + " , que quieres hacer hoy? \n 1) Mostrar Empleados \n 2) Mostrar Cliente \n 3) Añadir Empleado \n 4) Añadir Cliente \n 5) Borrar Empleado \n 6) Borrar Cliente \n 7) Insertar Vino \n 8) Mostrar Vinos \n 9) Borrar Vino \n 10) Registrar Visitante \n 0) Salir");
+                gestion = int.Parse(Console.ReadLine());
             }
             else
             {

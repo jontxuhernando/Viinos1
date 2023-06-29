@@ -23,15 +23,15 @@ namespace Vinos1
             Console.WriteLine("Inserta telefono");
             int telefonoVisitante = int.Parse(Console.ReadLine());
             Console.WriteLine("Inserta codigo de Reserva");
-            string codReservaVisitanteo = Console.ReadLine();
+            string codReservaVisitante = Console.ReadLine();
             Console.WriteLine("Compra Vino?");
-            bool compraVino = bool.Parse(Console.ReadLine());
+            string compraVino = Console.ReadLine();
 
 
 
 
             string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Talio tecnico\source\repos\Bodega.mdb";
-            string consulta = "INSERT INTO Visitantes (nifCliente,nombreCliente,direccionCliente,telefonoCliente,inicioContratoCliente,finContratoCliente) VALUES ('" + dniVisitante + "','" + nombreVisitante + "', '" + apellidoVisitante + "'," + telefonoVisitante + ",'" + codReservaVisitanteo + "','" + compraVino + "')";
+            string consulta = "INSERT INTO Visitantes (dniVisitante,nombreVisitante,apellidoVisitante,telefonoVisitante,codReserva,compraVino) VALUES ('" + dniVisitante + "','" + nombreVisitante + "', '" + apellidoVisitante + "'," + telefonoVisitante + ",'" + codReservaVisitante + "','" + compraVino + "')";
             using (OleDbConnection conexion = new OleDbConnection(ruta))
             {
                 OleDbCommand comando = new OleDbCommand(consulta, conexion);
@@ -41,7 +41,7 @@ namespace Vinos1
                 try
                 {
                     conexion.Open();
-                    OleDbDataReader tablaVinos = comando.ExecuteReader();
+                    OleDbDataReader tablaVisitantes = comando.ExecuteReader();
 
                     conexion.Close();
 
