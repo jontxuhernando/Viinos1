@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vinos1;
 
-namespace Viinos1
+namespace Vinos1
 {
     internal class Clientes
     {

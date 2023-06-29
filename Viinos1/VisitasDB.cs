@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Viinos1
+namespace Vinos1
 {
-    internal class VisitasDB
+    public class VisitasDB
     {
 
 

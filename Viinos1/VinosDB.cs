@@ -14,6 +14,7 @@ namespace Vinos1
 
         Vinos tv =new Vinos(100);
         Vino v = new Vino();
+       
 
 
 
@@ -32,6 +33,7 @@ namespace Vinos1
                     conexion.Open();
                     using (OleDbDataReader miTabla = comando.ExecuteReader())  //a mi tabla traeme lo que lleva la select
                     {
+                       
                         Console.WriteLine("----------------Nuestros Vinos--------------");
                         while (miTabla.Read())
                         {
@@ -40,6 +42,10 @@ namespace Vinos1
                             v.Anio = miTabla.GetInt32(2);
                             v.Tipo = miTabla.GetString(3);
                             v.TipoUva = miTabla.GetString(4);
+
+                           
+
+                            
 
                             Console.WriteLine(" ID: "+v.CodVino +" Nombre: "+v.Nombre+" Año: "+v.Anio+" Tipo: "+v.Tipo+" Tipo de Uva: "+v.TipoUva);
                             

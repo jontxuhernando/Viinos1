@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anotaciones.cs" />
     <Compile Include="Ardoa.cs" />
     <Compile Include="Bodega.cs" />
     <Compile Include="Cliente.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Visita.cs" />
     <Compile Include="Visitante.cs" />
     <Compile Include="Visitantes.cs" />
+    <Compile Include="VisitantesDB.cs" />
     <Compile Include="Visitas.cs" />
     <Compile Include="VisitasDB.cs" />
   </ItemGroup>

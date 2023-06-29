@@ -12,9 +12,9 @@ namespace Vinos1
 {
      public class Bodega
     {
-        
-        
-       
+
+
+        VisitasDB visi = new VisitasDB();
 
         //Muestra los datos e información de la bodega 
 
@@ -28,12 +28,6 @@ namespace Vinos1
         }
         
         
-        //inserta una visita en la base de datos , meterlo en VisitasDB
-
-
-        
-        
-        
         //area privada
 
         static public void areaprivada()
@@ -45,12 +39,12 @@ namespace Vinos1
            
             string pass=Console.ReadLine();
 
-            if(usuario=="Logan" && pass == "patata1")
+            if(usuario=="Pepe" && pass == "patata1")
             {
                 int gestion;
                 do
                 {
-                    Console.WriteLine("Bienvenido "+usuario+" , que quieres hacer hoy? \n 1) Mostrar Empleados \n 2) Mostrar Clientes \n 3) Añadir Empleado \n 4) Añadir Cliente \n 5) Borrar Empleado \n 6) Borrar Cliente \n 7) Insertar Vino \n 8) Mostrar Vinos \n 9) Borrar Vino \n 0) Salir");
+                    Console.WriteLine("Bienvenido "+usuario+" , que quieres hacer hoy? \n 1) Mostrar Empleados \n 2) Mostrar Cliente \n 3) Añadir Empleado \n 4) Añadir Cliente \n 5) Borrar Empleado \n 6) Borrar Cliente \n 7) Insertar Vino \n 8) Mostrar Vinos \n 9) Borrar Vino \n 0) Salir");
                     gestion = int.Parse(Console.ReadLine());
                     switch (gestion) {
 
@@ -86,7 +80,7 @@ namespace Vinos1
                         
 
 
-                        // MAIN //   
+      // MAIN //   
 
 
 
@@ -103,9 +97,13 @@ namespace Vinos1
 
             int op;
             Console.WriteLine("Bienvenido a la Bodega");
-            Console.WriteLine("Seleccione que desea hacer \n 1) Ver vinos \n 2) Insertar Vino \n 3) Saber mas de nosotros \n 4) Area privada \n 0) Salir");
+            Console.WriteLine("Seleccione que desea hacer \n 1) Ver vinos \n 2) Visite la Bodega \n 3) Saber mas de nosotros \n 4) Area privada \n 0) Salir");
             op = int.Parse(Console.ReadLine());
             VinosDB wine = new VinosDB();
+         
+            
+            
+            
 
             //Menu Principal
 
@@ -118,7 +116,8 @@ namespace Vinos1
                         break;
 
                     case 2:
-                        wine.insertarVino();
+
+                        VisitasDB.insertarVisita();
                         break;
 
                     case 3:
@@ -137,39 +136,7 @@ namespace Vinos1
 
 
 
-            /*   List<Ardoa> listaVinos = new List<Ardoa>()  // crea lista de vinos de la List de la clase Ardoa
-               {
-                   new Ardoa()
-                   {
-                       Nombre="Aromas de Laguardia",   // hace el nuevo ardoa con los atributos de la clase Ardoa
-                       Anio=2015,
-                       Tipo="Tinto"
-
-                   },
-
-                   new Ardoa()
-                   {
-                       Nombre="Esencias",
-                       Anio=2020,
-                       Tipo="Blanco"
-
-                   },
-
-           };
-
-               //listaVinos.Remove("Esencias");
-
-               //recorre la lista con un array para mostrar los elementos 
-               Console.WriteLine("------------------Lista de vinos----------------");
-
-               for (int i = 0; i < listaVinos.Count; i++)
-               {
-                   Console.WriteLine(listaVinos[i].Nombre + " es del año " + listaVinos[i].Anio);
-               }
-               Console.ReadKey();
-
-           }
-            */
+            
 
 
 
