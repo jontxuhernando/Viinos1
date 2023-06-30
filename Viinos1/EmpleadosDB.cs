@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Viinos1
+namespace Vinos1
 {
-    internal class EmpleadosDB
+    public class EmpleadosDB
     {
 
 
         static public void insertarEmpleado()   //esto va a ClientesDB
         {
             Console.WriteLine("Inserta Dni");
-            string dniVisitante = Console.ReadLine();
+            string dniEmpleado = Console.ReadLine();
             Console.WriteLine("Inserta nombre ");
             string nombreEmpleado = Console.ReadLine();
             Console.WriteLine("Inserta apellido");
@@ -29,7 +29,7 @@ namespace Viinos1
 
 
             string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Talio tecnico\source\repos\Bodega.mdb";
-            string consulta = "INSERT INTO Empleados (dniEmpleado,nombreEmpleado,apellidoEmpleado,telefonoEmpleado,codDepartamento) VALUES ('" + dniVisitante + "','" + nombreEmpleado + "', '" + apellidoEmpleado + "'," + telefonoEmpleado + "," + codDepartamento + ")";
+            string consulta = "INSERT INTO Empleados (dniEmpleado,nombreEmpleado,apellidoEmpleado,telefonoEmpleado,codDepartamento) VALUES ('" + dniEmpleado + "','" + nombreEmpleado + "', '" + apellidoEmpleado + "'," + telefonoEmpleado + "," + codDepartamento + ")";
             using (OleDbConnection conexion = new OleDbConnection(ruta))
             {
                 OleDbCommand comando = new OleDbCommand(consulta, conexion);
@@ -39,7 +39,7 @@ namespace Viinos1
                 try
                 {
                     conexion.Open();
-                    OleDbDataReader tablaVisitantes = comando.ExecuteReader();
+                    OleDbDataReader tablaEmpleados = comando.ExecuteReader();
 
                     conexion.Close();
 

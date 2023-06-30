@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Vinos1
 {
-    internal class ClientesDB
+     class ClientesDB
     {
 
 

@@ -65,12 +65,13 @@ namespace Vinos1
 
 
 
-            string consulta = "DELETE  FROM Visitantes WHERE Id = ";
-            int id;
+            string consulta = "DELETE  FROM Visitantes WHERE dni = ";
+            string dni;
 
-            System.Console.WriteLine("¿Qué id quieres borrar?");
-            id = int.Parse(System.Console.ReadLine());
-            consulta = consulta + id;
+            System.Console.WriteLine("¿Qué código de reseva quieres borrar?");
+            dni = System.Console.ReadLine();
+                
+            consulta = consulta + dni;
 
             //Ver consulta
             System.Console.WriteLine(consulta);
