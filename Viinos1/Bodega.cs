@@ -18,6 +18,7 @@ namespace Vinos1
         VisitasDB visi = new VisitasDB();
         VisitantesDB visitor = new VisitantesDB();
         EmpleadosDB emp =new EmpleadosDB();
+       
 
         //Muestra los datos e información de la bodega 
 
@@ -54,27 +55,51 @@ namespace Vinos1
                             case 1:
                                 EmpleadosDB.LeerEmpleados();
                             break;
+
+
                             case 2:
-                            
+                                ClientesDB.LeerClientes();
                             break;
+
 
                             case 3:
                                 EmpleadosDB.insertarEmpleado();
                             break;
 
+
                             case 4:
-                             //   insertarCliente();
+                                ClientesDB.insertarCliente();
                             break;
+
+
+                            case 5:
+                            EmpleadosDB.borrarEmpleado();
+
+                            break;
+
+
+                            case 6:
+                              ClientesDB.borrarCliente();
+                            break;
+
 
                             case 7:
-                              //  insertarVino();
+                            VinosDB.insertarVino();
                             break;
+
 
                             case 8:
-                              //  LeerVinos();
+                             VinosDB.leerVinos();
                             break;
 
-                            case 10:
+
+                            case 9:
+                                VinosDB.borrarVino();
+                            break;
+
+
+
+                        case 10:
                                 VisitantesDB.insertarVisitante();
                             break;
 
@@ -128,7 +153,7 @@ namespace Vinos1
                 switch (op)
                 {
                     case 1:
-                        wine.LeerVinos();
+                        VinosDB.leerVinos();
                         break;
 
                     case 2:

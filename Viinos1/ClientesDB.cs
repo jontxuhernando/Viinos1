@@ -100,6 +100,85 @@ namespace Vinos1
 
 
 
+        static public void borrarCliente()
+        {
+            //La ruta de la BD
+            string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Talio tecnico\source\repos\Bodega.mdb";
+
+
+
+
+            string consulta = "DELETE  FROM Clientes WHERE Id = ";
+            int id;
+
+            System.Console.WriteLine("¿Qué id quieres borrar?");
+            id = int.Parse(System.Console.ReadLine());
+            consulta = consulta + id;
+
+            //Ver consulta
+            System.Console.WriteLine(consulta);
+
+            // Create a connection    
+            using (OleDbConnection conexion = new OleDbConnection(ruta))
+            {
+                // Create a command and set its connection    
+                OleDbCommand comando = new OleDbCommand(consulta, conexion);
+
+
+                // Open the connection and execute the select command.    
+                try
+                {
+                    // Open connecton    
+                    conexion.Open();
+                    // Execute command    
+
+
+
+                    OleDbDataReader miTabla = comando.ExecuteReader();
+                    Console.WriteLine("Comando eliminado");
+
+                    conexion.Close();
+
+
+
+
+
+
+
+
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Problemicas txato!!" + ex.Message);
+                }
+
+            }
+            System.Console.ReadKey();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
