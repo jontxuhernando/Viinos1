@@ -37,9 +37,9 @@ namespace Vinos1
         static public void areaprivada()
         {
             
-            Console.WriteLine("Introduce Usuario");
+            Console.WriteLine("Usuario");
             string usuario = Console.ReadLine();
-            Console.WriteLine("Intrdoduce contraseña");
+            Console.WriteLine("Contraseña");
            
             string pass=Console.ReadLine();
 
@@ -48,7 +48,7 @@ namespace Vinos1
                 int gestion;
                 do
                 {
-                    Console.WriteLine("Bienvenido "+usuario+" , que quieres hacer hoy? \n 1) Mostrar Empleados \n 2) Mostrar Cliente \n 3) Añadir Empleado \n 4) Añadir Cliente \n 5) Borrar Empleado \n 6) Borrar Cliente \n 7) Insertar Vino \n 8) Mostrar Vinos \n 9) Borrar Vino \n 10) Registrar Visitante \n 0) Salir");
+                    Console.WriteLine("Bienvenido "+usuario+ " , que quieres hacer hoy? \n 1) Mostrar Empleados \n 2) Mostrar Cliente \n 3) Añadir Empleado \n 4) Añadir Cliente \n 5) Borrar Empleado \n 6) Borrar Cliente \n 7) Insertar Vino \n 8) Mostrar Vinos \n 9) Borrar Vino \n 10) Insertar Visitante \n 11) Borrar Visitante \n 12) Insertar Departamento \n 13) Eliminar Departamento \n 0) Salir");
                     gestion = int.Parse(Console.ReadLine());
                     switch (gestion) {
 
@@ -98,12 +98,29 @@ namespace Vinos1
                             break;
 
 
-
-                        case 10:
+                            case 10:
                                 VisitantesDB.insertarVisitante();
                             break;
 
-           }
+                            case 11:
+                                VisitantesDB.borrarVisitante();
+                            break;
+
+
+                            case 12:
+                                DepartamentosDB.insertarDepartamento();
+                            break;
+
+
+                            case 13:
+                                DepartamentosDB.borrarDepartamento();
+                            break;
+
+
+
+                       
+
+                    }
 
 
 

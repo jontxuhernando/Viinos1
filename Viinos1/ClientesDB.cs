@@ -10,6 +10,8 @@ namespace Vinos1
     internal class ClientesDB
     {
 
+
+        //Mostrar la registros de la tabla clientes
         static public void LeerClientes()   //esto va en clientesDB
         {
             string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Talio tecnico\source\repos\Bodega.mdb";
@@ -50,8 +52,8 @@ namespace Vinos1
         }
 
 
-
-        static public void insertarCliente()   //esto va a ClientesDB
+        // Agregar clientes a la Base de datos
+        static public void insertarCliente()   
         {
             Console.WriteLine("Inserta Nif");
             string nifCliente = Console.ReadLine();
@@ -99,7 +101,7 @@ namespace Vinos1
 
 
 
-
+        // Borrar el registro que le indiquemos de la tabla clientes
         static public void borrarCliente()
         {
             //La ruta de la BD

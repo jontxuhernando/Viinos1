@@ -1,88 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
-using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vinos1
+namespace Viinos1
 {
-     public class VinosDB
+    internal class DepartamentosDB
     {
 
 
-        Vinos tv =new Vinos(100);
-        Vino v = new Vino();
-       
-
-
-
-         static public void leerVinos()
+        static public void insertarDepartamento()
         {
-            string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Talio tecnico\source\repos\Bodega.mdb";
-            string consulta = "SELECT * FROM Vinos";
-            using (OleDbConnection conexion = new OleDbConnection(ruta))
-            {
-                OleDbCommand comando = new OleDbCommand(consulta, conexion);
-
-
-
-                try
-                {
-                    conexion.Open();
-                    using (OleDbDataReader miTabla = comando.ExecuteReader())  //a mi tabla traeme lo que lleva la select
-                    {
-                       
-                        Console.WriteLine("----------------Nuestros Vinos--------------");
-                        while (miTabla.Read())
-                        {
-
-                            Console.WriteLine("{0} {1} {2} {3} {4}  ", miTabla["CodVino"].ToString(), miTabla["Nombre"].ToString(), miTabla["Anio"].ToString(), miTabla["Tipo"].ToString(), miTabla["TipoUva"].ToString());
-
-                        }
-
-                    }
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("ha chustao");
-                }
-
-
-
-
-
-
-
-
-            }
-        }
-
-
-
-
-
-
-
-
-        static public void insertarVino()
-        {
-            Console.WriteLine("Inserta nombre");
-            string nombre = System.Console.ReadLine();
-            Console.WriteLine("Inserta año ");
-            int year = int.Parse(Console.ReadLine());
-            Console.WriteLine("Inserta tipo");
-            string tipo = (Console.ReadLine());
-            Console.WriteLine("Inserta tipo de uva");
-            string uva = (Console.ReadLine());
+            Console.WriteLine("Inserta Codigo de Departamento");
+            string codDep = Console.ReadLine();
+            Console.WriteLine("Inserta Nombre del Departamento ");
+            string nomDep = Console.ReadLine();
+            
 
 
 
 
             string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Talio tecnico\source\repos\Bodega.mdb";
-            string consulta = "INSERT INTO Vinos (nombre, anio,tipo,tipoUva) VALUES ('" + nombre + "'," + year + ",'" + tipo + "','" + uva + "')";
+            string consulta = "INSERT INTO Departamentos (codDepartamento,nombreDepartamento) VALUES (" + codDep + ",'" + nomDep + "')";
             using (OleDbConnection conexion = new OleDbConnection(ruta))
             {
                 OleDbCommand comando = new OleDbCommand(consulta, conexion);
@@ -110,11 +51,7 @@ namespace Vinos1
 
 
 
-
-
-
-
-        static public void borrarVino()
+        static public void borrarDepartamento()
         {
             //La ruta de la BD
             string ruta = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Talio tecnico\source\repos\Bodega.mdb";
@@ -122,7 +59,7 @@ namespace Vinos1
 
 
 
-            string consulta = "DELETE  FROM Vinos WHERE Id = ";
+            string consulta = "DELETE  FROM Departamentos WHERE Id = ";
             int id;
 
             System.Console.WriteLine("¿Qué id quieres borrar?");
@@ -173,8 +110,6 @@ namespace Vinos1
             System.Console.ReadKey();
 
         }
-
-
 
 
 

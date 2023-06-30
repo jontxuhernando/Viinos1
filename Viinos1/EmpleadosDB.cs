@@ -21,7 +21,7 @@ namespace Viinos1
             string apellidoEmpleado = Console.ReadLine();
             Console.WriteLine("Inserta telefono");
             int telefonoEmpleado = int.Parse(Console.ReadLine());
-            Console.WriteLine("Inserta codigo Departamento");
+            Console.WriteLine("Departamento al que pertenece");
             int codDepartamento = int.Parse(Console.ReadLine());
            
 
